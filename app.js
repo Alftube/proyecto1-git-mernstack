@@ -39,7 +39,13 @@ function getCountryTranslatedName(isoCode, language){
  * @returns {Array}
  */
 function getCountriesBySubregion(subregion){
-    //Complete with your code
+    const countrySub = {};
+    for (let i = 0; i < countries.length; i++) {
+      if (countries[i].subregion === subregion) {
+        countrySub[i] = countries[i];
+      }
+    }
+    return countrySub;
 }
 
 function main() {
